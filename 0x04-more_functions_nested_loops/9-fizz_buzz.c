@@ -39,7 +39,7 @@ putchar(' ');
 continue;
 }
 
-printf("%d ", i);
+printf("%d", i);
 putchar(' ');
 }
 putchar('\n');
