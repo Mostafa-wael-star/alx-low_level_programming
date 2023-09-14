@@ -27,9 +27,9 @@ continue;
 else if (i % 5 == 0)
 {
 printf("Buzz");
-putchar(' ');
 if (i == 100)
 break;
+putchar(' ');
 continue;
 }
 else if (i % 3 == 0)
