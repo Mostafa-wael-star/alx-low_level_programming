@@ -19,7 +19,7 @@ while (*s != '\0')
 counter++;
 s++;
 }
-s-=counter;
+s -= counter;
 for (i = 0; i < counter; i++)
 {
 counter--;
