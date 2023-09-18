@@ -15,19 +15,13 @@
 
 char *_strcpy(char *dest, char *src)
 {
-char *counter_ptr = src;
 int counter = 0;
-int i;
 
-while (*counter_ptr != '\0')
+while (src[counter])
 {
-counter_ptr++;
+dest[counter] = src[counter];
 counter++;
 }
-counter++;
-for (i = 0; i <= counter; i++)
-{
-dest[i] = src[i];
-}
+
 return (dest);
 }
