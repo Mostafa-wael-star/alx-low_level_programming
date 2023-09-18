@@ -22,6 +22,6 @@ while (src[counter])
 dest[counter] = src[counter];
 counter++;
 }
-
+dest[counter] = '\0';
 return (dest);
 }
