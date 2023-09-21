@@ -16,25 +16,27 @@ str[i] = str[i] - 32;
 
 for (; str[i] != '\0'; i++)
 {
-switch (str[i - 1])
-{
-case ' ':
-case '\n':
-case '\t':
-case '{':
-case '}':
-case ',':
-case ';':
-case '.':
-case '?':
-case '!':
-case '"':
-case '(':
-case ')':
 if (str[i] <= 'z' && str[i] >= 'a')
+{
+if (str[i - 1] == ' ' ||
+str[i - 1] ==  '\n' ||
+str[i - 1] ==  '\t' ||
+str[i - 1] ==  '{' ||
+str[i - 1] ==  '}' ||
+str[i - 1] ==  ',' ||
+str[i - 1] ==  ';' ||
+str[i - 1] ==  '.' ||
+str[i - 1] ==  '?' ||
+str[i - 1] ==  '!' ||
+str[i - 1] ==  '"' ||
+str[i - 1] ==  '(' ||
+str[i - 1] ==  ')'
+)
+{
 str[i] = str[i] - 32;
-break;
 }
+}
+
 }
 return (str);
 }
