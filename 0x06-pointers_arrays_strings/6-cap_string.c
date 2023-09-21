@@ -9,12 +9,12 @@
 
 char *cap_string(char *str)
 {
-int i = 1;
+int i;
 
 if (str[0] <= 'z' && str[0] >= 'a')
 str[i] = str[i] - 32;
 
-for (; str[i] != '\0'; i++)
+for (i = 1; str[i] != '\0'; i++)
 {
 if (str[i] <= 'z' && str[i] >= 'a')
 {
