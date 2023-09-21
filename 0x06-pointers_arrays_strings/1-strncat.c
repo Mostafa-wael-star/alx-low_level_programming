@@ -29,7 +29,7 @@ while (*dest != '\0')
 {
 dest++;
 }
-while (counter < n)
+while (counter < n && *(src) != '\0')
 {
 *dest = *src;
 dest++;
