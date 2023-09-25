@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strpsn - entry
+ * _strspn - entry poiint
  *
  * @s: the strring
  * @accept : the substring
