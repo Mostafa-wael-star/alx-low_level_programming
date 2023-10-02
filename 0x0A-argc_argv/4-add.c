@@ -22,14 +22,19 @@ return (0);
 }
 
 
-for (i = 0; i < argc; i++)
+for (i = 1; i < argc; i++)
 {
-if (*argv[i] <= 'z' && *argv[i] >= 'a')
+if (*argv[i] <= '9' && *argv[i] >= '0')
+{
+sum += atoi(argv[i]);
+}
+
+else
 {
 printf("Error\n");
 return (1);
 }
-sum += atoi(argv[i]);
+
 }
 printf("%i\n", sum);
 return (0);
