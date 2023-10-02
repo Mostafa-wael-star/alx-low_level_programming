@@ -17,7 +17,7 @@ int i;
 
 if (argc <= 1)
 {
-printf("0\n");
+printf("%i\n", 0);
 return (0);
 }
 
