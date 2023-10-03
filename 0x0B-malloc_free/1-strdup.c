@@ -27,12 +27,13 @@ strSize++;
 i++;
 }
 
-if (strdup == NULL)
-return (NULL);
+
 for (i = 0; i < strSize; i++)
 {
 strdup[i] = str[i];
 }
+if (strdup == NULL)
+return (NULL);
 strdup[strSize] = '\0';
 return (strdup);
 
