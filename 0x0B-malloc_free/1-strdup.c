@@ -33,6 +33,7 @@ for (i = 0; i < strSize; i++)
 {
 strdup[i] = str[i];
 }
+strdup[strSize] = '\0';
 return (strdup);
 
 }
