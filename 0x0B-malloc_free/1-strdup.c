@@ -15,7 +15,7 @@ char *_strdup(char *str)
 {
 int strSize = 0;
 int i = 0;
-char *strdup = malloc(sizeof(char) * strSize);
+char *strdup = malloc((sizeof(char) * strSize) + 1);
 
 if (str == NULL)
 return (NULL);
@@ -27,14 +27,13 @@ strSize++;
 i++;
 }
 
-
+if (strdup == NULL)
+return (NULL);
 for (i = 0; i < strSize; i++)
 {
 strdup[i] = str[i];
 }
-if (strdup == NULL)
-return (NULL);
-strdup[strSize] = '\0';
+
 return (strdup);
 
 }
