@@ -3,37 +3,51 @@
 #include <stdlib.h>
 
 /**
- *_strdup - entry
-* @str: str
-* Return: array if sucess NULL if not
-*/
+ * _strlen - return length of a string
+ *
+ * @s: char type
+ * Return:  length of string
+ */
+int _strlen(char *s)
+{
+int a;
 
+for (a = 0; s[a] != '\0'; a++)
+{
 
+}
+return (a);
+}
 
+/**
+ * *_strdup - function to return pointer to string
+ * @str: pointer to string array input
+ * Return: pointer to string created
+ */
 
 char *_strdup(char *str)
 {
-int strSize = 0;
-int i = 0;
-char *strdup = malloc((sizeof(char) * strSize) + 1);
+char *ptr;
+int size;
+int x;
 
 if (str == NULL)
-return (NULL);
-
-
-while (str[i] != '\0')
 {
-strSize++;
-i++;
-}
-
-if (strdup == NULL)
 return (NULL);
-for (i = 0; i < strSize; i++)
-{
-strdup[i] = str[i];
 }
+size = _strlen(str) + 1;
 
-return (strdup);
+ptr = malloc(size *sizeof(char));
 
+x = 0;
+while (x < size)
+{
+if (ptr == NULL)
+{
+return (NULL);
+}
+ptr[x] = str[x];
+x++;
+}
+return (ptr);
 }
