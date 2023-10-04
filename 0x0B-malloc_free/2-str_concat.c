@@ -18,6 +18,8 @@ char *str_concat(char *s1, char *s2)
 {
 int i = 0;
 int strIndex = 0;
+int newSize = string_length(s1) + string_length(s2) + 1;
+char *strConcat = malloc(sizeof(char) * newSize);
 
 if (s1 == NULL)
 s1 = "";
@@ -25,8 +27,7 @@ s1 = "";
 if (s2 == NULL)
 s1 = "";
 
-int newSize = string_length(s1) + string_length(s2) + 1;
-char *strConcat = malloc(sizeof(char) * newSize);
+
 
 for (; i < string_length(s1); strIndex++, i++)
 strConcat[strIndex] = s1[i];
